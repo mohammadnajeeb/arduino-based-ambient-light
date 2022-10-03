@@ -80,16 +80,8 @@ We are using ambient light to reduce eye strain by mounting an Addressable RGB S
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![Arduino][arduino.cc]][arduino-url]
-* [![Vuee][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* Arduino Nano
+* C++
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,34 +90,93 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Arduino IDE
+* FastLED
 
 ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+1. Arduino IDE [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)
+2. Paste the code in the IDE
    ```
-3. Install NPM packages
-   ```sh
-   npm install
+   #include "FastLED.h"\
+   #define NUM_LEDS 8 
+   #define DATA_PIN 7
+   #define serialRate 115200
+   
+   uint8_t prefix[] = {'A', 'd', 'a'}, hi, lo, chk, i;
+   
+   // Initialise LED-array
+   CRGB leds[NUM_LEDS];
+
+  void setup() {
+    // Use NEOPIXEL to keep true colors
+    FastLED.addLeds<WS2812, DATA_PIN>(leds, NUM_LEDS);
+    
+    // Initial RGB flash
+    LEDS.showColor(CRGB(255, 0, 0));
+    delay(500);
+    LEDS.showColor(CRGB(0, 255, 0));
+    delay(500);
+    LEDS.showColor(CRGB(0, 0, 255));
+    delay(500);
+    LEDS.showColor(CRGB(0, 0, 0));
+    
+    Serial.begin(serialRate);
+    // Send "Magic Word" string to host
+    Serial.print("Ada\n");
+  }
+
+  void loop() { 
+    // Wait for first byte of Magic Word
+    for(i = 0; i < sizeof prefix; ++i) {
+      waitLoop: while (!Serial.available()) ;;
+      // Check next byte in Magic Word
+      if(prefix[i] == Serial.read()) continue;
+      // otherwise, start over
+      i = 0;
+      goto waitLoop;
+    }
+    
+    // Hi, Lo, Checksum  
+    while (!Serial.available()) ;;
+    hi=Serial.read();
+    while (!Serial.available()) ;;
+    lo=Serial.read();
+    while (!Serial.available()) ;;
+    chk=Serial.read();
+    
+    // If checksum does not match go back to wait
+    if (chk != (hi ^ lo ^ 0x55)) {
+      i=0;
+      goto waitLoop;
+    }
+  
+    memset(leds, 0, NUM_LEDS * sizeof(struct CRGB));
+    // Read the transmission data and set LED values
+    for (uint8_t i = 0; i < NUM_LEDS; i++) {
+      byte r, g, b;    
+      while(!Serial.available());
+      r = Serial.read();
+      while(!Serial.available());
+      g = Serial.read();
+      while(!Serial.available());
+      b = Serial.read();
+      leds[i].r = r;
+      leds[i].g = g;
+      leds[i].b = b;
+    }
+    
+    // Shows new values
+    FastLED.show();
+  }
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+3. Upload the code to the Arduino
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
