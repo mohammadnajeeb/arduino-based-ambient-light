@@ -102,7 +102,7 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 
 1. Arduino IDE [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)
-2. Paste the code in the IDE
+2. Copy and paste the code into the IDE
    ```sh
     #include "FastLED.h"
     #define NUM_LEDS 8 
@@ -177,8 +177,8 @@ To get a local copy up and running follow these simple example steps.
       FastLED.show();
     }
    ```
-3. Upload the code to the Arduino
-4. Configure with Prismatik [https://github.com/psieg/Lightpack](https://github.com/psieg/Lightpack)
+3. Connect the Arduino to the computer and upload the code.
+4. Use Prismatik to configure [https://github.com/psieg/Lightpack](https://github.com/psieg/Lightpack)
 
 _For full setup instructions, please refer to the [Tutorial Video](https://example.com)_
 
