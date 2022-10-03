@@ -81,6 +81,7 @@ We are using ambient light to reduce eye strain by mounting an Addressable RGB S
 ### Built With
 
 * Arduino Nano
+* ws2812b LED Strip Light
 * C++
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
