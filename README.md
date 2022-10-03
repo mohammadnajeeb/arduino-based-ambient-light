@@ -100,8 +100,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Arduino IDE [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)
 2. Paste the code in the IDE
    ```sh
@@ -214,22 +212,12 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@md__najeeb](https://twitter.com/md__najeeb) - mnajeeb33@myamu.ac.in
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/mohammadnajeeb/arduino-based-ambient-light](https://github.com/mohammadnajeeb/arduino-based-ambient-light)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
