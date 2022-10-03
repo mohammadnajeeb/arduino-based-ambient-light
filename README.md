@@ -69,7 +69,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Arduino Based Ambient Light Setup][product-screenshot]](https://raw.githubusercontent.com/mohammadnajeeb/arduino-based-ambient-light/main/sample/screenshot.jpg)
 
 An ambient light source is essentially an indirect source of light. It is a soft light that is reflected from the wall or ceiling. The light reduces the shadows on people's faces and fills the room with equal brightness, allowing the object to be more visible and drawing people into the room. Various methods can be used to produce ambient light.
 
