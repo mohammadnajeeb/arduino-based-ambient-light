@@ -27,7 +27,7 @@
   <p align="center">
     Light source that illuminates the wall or surfaces behind the computer screen, reducing eye strain and enhancing image quality.
     <br />
-    <a href="https://youtube.com">View Demo</a>
+    <a href="https://youtu.be/kcPElPKWJ5Q">View Demo</a>
     ·
     <a href="https://github.com/mohammadnajeeb/arduino-based-ambient-light/issues">Report Bug</a>
     ·
@@ -191,7 +191,7 @@ _For full setup instructions, please refer to the [Tutorial Video](https://examp
 
 The ambient light can be used while watching movies or playing games to reduce eye strain and ensure an immersive experience.
 
-_For more examples, please refer to the [Demo](https://example.com)_
+_For more examples, please refer to the [Demo](https://youtu.be/kcPElPKWJ5Q)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
