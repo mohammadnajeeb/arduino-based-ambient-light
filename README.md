@@ -100,7 +100,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 * [![Next][Next.js]][Next-url]
 * [![Arduino][arduino.cc]][arduino-url]
-* [![Vue][Vue.js]][Vue-url]
+* [![Vuee][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
