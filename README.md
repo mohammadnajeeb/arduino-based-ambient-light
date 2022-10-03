@@ -97,6 +97,7 @@ To get a local copy up and running follow these simple example steps.
 
 * Arduino IDE
 * FastLED
+* Prismatik
 
 ### Installation
 
@@ -177,6 +178,7 @@ To get a local copy up and running follow these simple example steps.
     }
    ```
 3. Upload the code to the Arduino
+4. Configure with Prismatik
 
 _For full setup instructions, please refer to the [Tutorial Video](https://example.com)_
 
@@ -228,7 +230,8 @@ Project Link: [https://github.com/mohammadnajeeb/arduino-based-ambient-light](ht
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
+* [FastLED](https://github.com/FastLED/FastLED)
+* [Lightpack Prismatik](https://github.com/psieg/Lightpack)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
