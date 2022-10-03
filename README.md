@@ -178,7 +178,7 @@ To get a local copy up and running follow these simple example steps.
     }
    ```
 3. Upload the code to the Arduino
-4. Configure with Prismatik
+4. Configure with Prismatik [https://github.com/psieg/Lightpack](https://github.com/psieg/Lightpack)
 
 _For full setup instructions, please refer to the [Tutorial Video](https://example.com)_
 
