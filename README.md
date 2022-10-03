@@ -71,6 +71,8 @@
 
 [![Arduino Based Ambient Light Setup][product-screenshot]](https://raw.githubusercontent.com/mohammadnajeeb/arduino-based-ambient-light/main/sample/screenshot.jpg)
 
+<img src="https://raw.githubusercontent.com/mohammadnajeeb/arduino-based-ambient-light/main/sample/screenshot.jpg">
+
 An ambient light source is essentially an indirect source of light. It is a soft light that is reflected from the wall or ceiling. The light reduces the shadows on people's faces and fills the room with equal brightness, allowing the object to be more visible and drawing people into the room. Various methods can be used to produce ambient light.
 
 We are using ambient light to reduce eye strain by mounting an Addressable RGB Strip light on the monitor's back. Instead of manually changing the color of the light, here we have used Arduino Nano to control the RGB Strip and display matching colors by grabbing pixels around the monitor. 
